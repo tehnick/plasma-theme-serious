@@ -24,7 +24,7 @@ Have in mind that Panels widget in this theme is not transparent and this was do
 Sometimes you might want to reload Plasma because of a problem with applying of desktop theme. To do that open a terminal (or KRunner) and run this command:
 
 ```
-kquitapp5 plasmashell && sleep 1 && plasmashell &> /dev/null &
+kquitapp5 plasmashell && sleep 1 && plasmashell 2> /dev/null &
 ```
 
 Enjoy!
