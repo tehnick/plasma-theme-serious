@@ -1,4 +1,4 @@
-# Plasma Theme Serious
+# Plasma Theme &ndash; Serious
 
 Website: https://store.kde.org/p/998716/ <br>
 Sources: https://github.com/tehnick/plasma-theme-serious
