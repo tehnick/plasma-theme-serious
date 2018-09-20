@@ -1,11 +1,15 @@
+VERSION ?= 0.0.3
 DESTDIR ?= $(HOME)/.local/share/plasma/desktoptheme
 
 build:
-	echo "Do nothing!"
-
-install:
 	mkdir -p $(CURDIR)/out/Serious
 	cp -a $(CURDIR)/src/* $(CURDIR)/out/Serious/
+
+tarball: build
+	rm -rf $(CURDIR)/out/serious-$(VERSION).tar.gz
+	cd $(CURDIR)/out/ && tar -caf serious-$(VERSION).tar.gz Serious
+
+install: build
 	mkdir -p $(DESTDIR)
 	rm -rf $(DESTDIR)/Serious
 	cp -a $(CURDIR)/out/Serious $(DESTDIR)/
