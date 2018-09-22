@@ -11,13 +11,18 @@ MIT (Expat). See the [LICENSE](https://github.com/tehnick/plasma-theme-serious/b
 
 ## Description
 
-Simple theme for Plasma Desktop: https://www.kde.org/plasma-desktop
+Serious theme for serious work.
 
 The basic idea: transparent widgets without visible borders, flat items, minimum of rounded corners, no gradients, only gray and cold colors.
 
 Theme should work fine even with disabled Desktop Effects (see Compositor Settings in System Settings).
 
 Have in mind that Panels widget in this theme is not transparent and this was done intentionally.
+
+## Extra links
+
+* [Plasma Desktop](https://www.kde.org/plasma-desktop)
+* [Creating of Plasma Theme](https://techbase.kde.org/Development/Tutorials/Plasma/Theme)
 
 ## Reloading Plasma
 
