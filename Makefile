@@ -5,11 +5,14 @@ DESTDIR ?= $(HOME)/.local/share/plasma/desktoptheme
 
 BUILDDIR = $(CURDIR)/out/$(PROJECT)
 TARBALL = serious-$(VERSION).tar.gz
+VERSTR = X-KDE-PluginInfo-Version=
 
 build: clean
 	mkdir -p $(BUILDDIR)
 	cp -a $(CURDIR)/src/* $(BUILDDIR)/
 	gzip -S z $(BUILDDIR)/*/*.svg
+	sed -i "$(BUILDDIR)/metadata.desktop" \
+	    -e "s!$(VERSTR).*!$(VERSTR)$(VERSION)!"
 
 clean:
 	rm -rf $(BUILDDIR)
