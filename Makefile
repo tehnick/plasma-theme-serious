@@ -1,21 +1,30 @@
-VERSION ?= 0.0.3
+PROJECT := Serious
+VERSION := 0.0.3
+
 DESTDIR ?= $(HOME)/.local/share/plasma/desktoptheme
 
-build:
-	mkdir -p $(CURDIR)/out/Serious
-	cp -a $(CURDIR)/src/* $(CURDIR)/out/Serious/
+BUILDDIR = $(CURDIR)/out/$(PROJECT)
+TARBALL = serious-$(VERSION).tar.gz
+
+build: clean
+	mkdir -p $(BUILDDIR)
+	cp -a $(CURDIR)/src/* $(BUILDDIR)/
+	gzip -S z $(BUILDDIR)/*/*.svg
+
+clean:
+	rm -rf $(BUILDDIR)
 
 tarball: build
-	rm -rf $(CURDIR)/out/serious-$(VERSION).tar.gz
-	cd $(CURDIR)/out/ && tar -caf serious-$(VERSION).tar.gz Serious
+	cd $(CURDIR)/out && rm -f $(TARBALL)
+	cd $(CURDIR)/out && tar -caf $(TARBALL) $(PROJECT)
 
 install: build
 	mkdir -p $(DESTDIR)
-	rm -rf $(DESTDIR)/Serious
-	cp -a $(CURDIR)/out/Serious $(DESTDIR)/
+	rm -rf $(DESTDIR)/$(PROJECT)
+	cp -a $(BUILDDIR) $(DESTDIR)/
 
 reload:
 	kquitapp5 plasmashell && sleep 1 && plasmashell 2> /dev/null &
 
 uninstall:
-	rm -rf $(DESTDIR)/Serious
+	rm -rf $(DESTDIR)/$(PROJECT)
