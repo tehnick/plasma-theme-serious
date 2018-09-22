@@ -13,11 +13,11 @@ MIT (Expat). See the [LICENSE](https://github.com/tehnick/plasma-theme-serious/b
 
 Serious theme for serious work.
 
-The basic idea: transparent widgets without visible borders, flat items, minimum of rounded corners, no gradients, only gray and cold colors.
+Have you tired from shiny colorful plasma themes? Try this one. The basic idea: transparent widgets without visible borders, flat items, minimum of rounded corners, no gradients, only gray and cold colors.
 
-Theme should work fine even with disabled Desktop Effects (see Compositor Settings in System Settings).
+This theme should work fine even with disabled Desktop Effects (see Compositor Settings in System Settings).
 
-Have in mind that Panels widget in this theme is not transparent and this was done intentionally.
+Have in mind that Panel widget in this theme is not transparent and this was done intentionally.
 
 ## Extra links
 
