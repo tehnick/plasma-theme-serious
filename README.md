@@ -7,7 +7,7 @@ Bug Tracker: https://github.com/tehnick/plasma-theme-serious/issues
 
 ## License
 
-MIT (Expat). See the [LICENSE](https://github.com/tehnick/plasma-theme-serious/blob/master/LICENSE) file for more information.
+GPLv2 or later. See [LICENSE](https://github.com/tehnick/plasma-theme-serious/blob/master/LICENSE) file for more information.
 
 ## Description
 
